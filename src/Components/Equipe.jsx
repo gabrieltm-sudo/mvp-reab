@@ -22,7 +22,7 @@ const Equipe = () => {
 
           <p> Mais informações disponíveis{" "}
             <a href="https://cnes2.datasus.gov.br/Mod_Profissional.asp?VCo_Unidade=4301602261448"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
             >
               aqui
             </a>.</p>

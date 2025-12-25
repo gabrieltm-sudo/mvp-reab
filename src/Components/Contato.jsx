@@ -21,11 +21,11 @@ const Contato = () => {
       <ul id="contato-list">
         <li>
           <Inbox/> <strong>E-mail:</strong>{" "}
-          <Link to="mailto:reabilitacaofisica.sms@bage.rs.gov.br"
-            target="_blank"
+          <a href="mailto:reabilitacaofisica.sms@bage.rs.gov.br"
+            target="_blank" rel="noopener noreferrer"
           >
             reabilitacaofisica.sms@bage.rs.gov.br
-          </Link>
+          </a>
         </li>
         <li>
           <Phone /> <strong>Telefone:</strong> {" "}(53) 3242-7494

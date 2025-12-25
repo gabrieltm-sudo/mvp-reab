@@ -29,9 +29,9 @@ const Servicos = () => {
           </div>
           <div className="servico-imagem">
             <figure>
-              <Link to="https://globoplay.globo.com/v/4095156/" target="_blank" rel="noopener noreferrer">
+              <a href="https://globoplay.globo.com/v/4095156/" target="_blank" rel="noopener noreferrer">
                 <img src="./images/fisioterapia.jpg" alt="Imagem de fisioterapia" className="imagem-servico" />
-              </Link>
+              </a>
               <figcaption><b>Reportagem da RBS sobre o SRF Bagé</b></figcaption>
             </figure>
           </div>
@@ -52,14 +52,14 @@ const Servicos = () => {
             <ul>
               <li>Dispensação;</li>
               <li>Substituição;</li>
-              <li>Encaminhamento para a <Link to="https://www.bage.rs.gov.br/noticias/oficina-ortopedica-de-bage-esta-realizando-medicao-de-ortese-e-proteses-1" target="_blank" rel="noopener noreferrer">confecção, manutenção e adaptação</Link>.</li>
+              <li>Encaminhamento para a <a href="https://www.bage.rs.gov.br/noticias/oficina-ortopedica-de-bage-esta-realizando-medicao-de-ortese-e-proteses-1" target="_blank" rel="noopener noreferrer">confecção, manutenção e adaptação</a>.</li>
             </ul>
           </div>
           <div className="servico-imagem">
             <figure>
-              <Link to="https://www.bage.rs.gov.br/noticias/oficina-ortopedica-de-bage-esta-realizando-medicao-de-ortese-e-proteses-1" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.bage.rs.gov.br/noticias/oficina-ortopedica-de-bage-esta-realizando-medicao-de-ortese-e-proteses-1" target="_blank" rel="noopener noreferrer">
                 <img src="./images/orteses.jpeg" alt="Imagem de órtese ou protese" className="imagem-servico" />
-              </Link>
+              </a>
               <figcaption><b>Medição de órteses e próteses</b></figcaption>
             </figure>
           </div>

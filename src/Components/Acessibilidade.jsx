@@ -19,7 +19,7 @@ function Acessibilidade() {
   };
 
   const diminuirFonte = () => {
-    const novoTamanho = fontSize - passo;
+    const novoTamanho = fontSize - p93asso;
 
     if (novoTamanho >= tamMin) {
       setFontSize(novoTamanho);

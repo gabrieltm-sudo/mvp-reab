@@ -43,12 +43,12 @@ const HomeContent = () => {
               </li>
               <li>
                 Fornecer órteses, próteses e meios de locomoção, como
-                <Link
-                  to="https://www.bage.rs.gov.br/noticias/reabilitacao-fisica-entrega-cadeiras-de-rodas"
-                  target="_blank"
+                <a
+                  href="https://www.bage.rs.gov.br/noticias/reabilitacao-fisica-entrega-cadeiras-de-rodas"
+                  target="_blank" rel="noopener noreferrer"
                 >
                   cadeiras de rodas
-                </Link>
+                </a>
                 , conforme mencionado na aba de{" "}
                 <Link to="/servicos">
                   serviços
