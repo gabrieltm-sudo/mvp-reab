@@ -15,7 +15,7 @@ const Cards = () => {
           <img src="images/servicos.jpg" alt="Imagem de equipamentos do SRF" />
           <h3><strong>Serviços</strong></h3>
           <p>Conheça os principais serviços oferecidos para sua reabilitação.</p>
-          <NavLink to="/Servicos" className="card-button">Ver Serviços</NavLink>
+          <NavLink to="/servicos" className="card-button">Ver Serviços</NavLink>
         </div>
 
         {/* Card de Como Agendar uma Consulta */}
