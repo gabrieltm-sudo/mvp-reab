@@ -5,15 +5,20 @@ import { useLocation } from 'react-router-dom';
 export const useRouteLoading = (delay = 800) => {
   const [isLoading, setIsLoading] = useState(false);
   const location = useLocation();
+  const [prevPathname, setPrevPathname] = useState(location.pathname);
 
   useEffect(() => {
-    setIsLoading(true);
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, delay);
+    // Só mostra loading se houve mudança de rota
+    if (prevPathname !== location.pathname) {
+      setIsLoading(true);
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, delay);
 
-    return () => clearTimeout(timer);
-  }, [location.pathname, delay]);
+      setPrevPathname(location.pathname);
+      return () => clearTimeout(timer);
+    }
+  }, [location.pathname, delay, prevPathname]);
 
   return isLoading;
 };

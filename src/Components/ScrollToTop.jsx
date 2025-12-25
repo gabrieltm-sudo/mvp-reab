@@ -5,7 +5,12 @@ function ScrollToTop(){
     const { pathname } = useLocation();
 
     useEffect(() => {
-        window.scrollTo(0,0);
+        // ✅ Pequeno delay para funcionar com o loading
+        const timer = setTimeout(() => {
+            window.scrollTo(0,0);
+        }, 100); // Scroll após 100ms
+
+        return () => clearTimeout(timer);
     }, [pathname]);
 
     return null;
