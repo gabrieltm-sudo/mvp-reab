@@ -23,8 +23,7 @@ const Consulta = () => {
       <br />
       <ol className="agendamento">
         <li>
-          Os documentos para o SRF entrar com o pedido via
-          <em>GERCON (Gerenciamento de Consultas)</em> são:
+          Os documentos para o SRF entrar com o pedido via <em>GERCON (Gerenciamento de Consultas)</em> são:
         </li>
         <ul>
           <li>RG ou Certidão de Nascimento;</li>

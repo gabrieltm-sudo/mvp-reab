@@ -30,7 +30,7 @@ const AppContent = () => {
       // ✅ Timer para esconder loading
       const timer = setTimeout(() => {
         setIsLoading(false);
-      }, 200);
+      }, 300);
 
       // ✅ Atualiza rota anterior
       setPreviousLocation(location.pathname);

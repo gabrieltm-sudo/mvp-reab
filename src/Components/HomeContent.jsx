@@ -42,8 +42,7 @@ const HomeContent = () => {
                 reabilitação física.
               </li>
               <li>
-                Fornecer órteses, próteses e meios de locomoção, como
-                <a
+                Fornecer órteses, próteses e meios de locomoção, como <a
                   href="https://www.bage.rs.gov.br/noticias/reabilitacao-fisica-entrega-cadeiras-de-rodas"
                   target="_blank" rel="noopener noreferrer"
                 >
