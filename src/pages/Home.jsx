@@ -1,7 +1,7 @@
 import React from "react";
-import MainContent from "./MainContent";
-import Cards from "./Cards";
-import HomeContent from "./HomeContent";
+import MainContent from "../components/ui/MainContent";
+import Cards from "../components/ui/Cards";
+import HomeContent from "../components/ui/HomeContent";
 
 const Home = () => {
   return (

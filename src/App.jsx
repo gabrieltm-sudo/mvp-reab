@@ -1,43 +1,28 @@
 // src/App.js
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 
-import Cabecalho from "./Components/Cabecalho";
-import Footer from "./Components/Footer";
-import Acessibilidade from "./Components/Acessibilidade";
-import LoadingSpinner from "./Components/LoadingSpinner";
+import Cabecalho from "./components/layout/Cabecalho";
+import Footer from "./components/layout/Footer";
+import Acessibilidade from "./components/common/Acessibilidade";
+import LoadingSpinner from "./components/ui/LoadingSpinner";
 
-import Home from "./Components/Home";
-import Servicos from "./Components/Servicos";
-import Contato from "./Components/Contato";
-import Consulta from "./Components/Consulta";
-import Equipe from "./Components/Equipe";
+import Home from "./pages/Home";
+import Servicos from "./pages/Servicos";
+import Contato from "./pages/Contato";
+import Consulta from "./pages/Consulta";
+import Equipe from "./pages/Equipe";
 
 import "./style.css";
-import ScrollToTop from "./Components/ScrollToTop";
+import ScrollToTop from "./components/common/ScrollToTop";
+import { useRouteLoading } from "./hooks/useLoading";
+import { theme } from './theme';
 
-// Componente interno para gerenciar loading
+// Componente limpo que usa o hook
 const AppContent = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const location = useLocation();
-  const [previousLocation, setPreviousLocation] = useState(location.pathname);
-
-  useEffect(() => {
-    // ✅ Só mostra loading se houve mudança real de rota
-    if (previousLocation !== location.pathname) {
-      setIsLoading(true);
-      
-      // ✅ Timer para esconder loading
-      const timer = setTimeout(() => {
-        setIsLoading(false);
-      }, 300);
-
-      // ✅ Atualiza rota anterior
-      setPreviousLocation(location.pathname);
-      
-      return () => clearTimeout(timer);
-    }
-  }, [location.pathname]); // ✅ Removi previousLocation da dependência
+  const isLoading = useRouteLoading(300); // 300ms de loading
 
   if (isLoading) {
     return <LoadingSpinner message="Carregando página..." />;
@@ -56,15 +41,18 @@ const AppContent = () => {
 
 const App = () => {
   return (
-    <Router>
-      <ScrollToTop />
-      <div>
-        <Cabecalho />
-        <AppContent />
-        <Acessibilidade />
-        <Footer />
-      </div>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Router>
+        <ScrollToTop />
+        <div>
+          <Cabecalho />
+          <AppContent />
+          <Acessibilidade />
+          <Footer />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 };
 

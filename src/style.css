@@ -105,7 +105,7 @@ header{
 #principal1{
     margin-top: 100px;
     border-bottom: solid #aed6f1;
-    background-image: url(./Components/backgroundok.png);
+    background-image: url(./components/ui/backgroundok.png);
     background-size: cover;
     background-position: center center;
     font-size: xx-large;
@@ -205,7 +205,7 @@ header{
     flex-wrap: wrap;
 }
 
-.card{
+.card {
     background-color: rgba(226, 226, 226, 0.363);
     border-radius: 15px;
     padding: 35px;
@@ -213,6 +213,7 @@ header{
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center; /* Centraliza botões MUI */
 }
 
 .card img{
@@ -690,6 +691,14 @@ h4{
 
     .card {
         width: 90%;
+        align-items: center; /* Garante centralização no mobile */
+    }
+
+    /* Botões MUI nos cards - mobile */
+    .card .MuiButton-root {
+        width: 85% !important;
+        align-self: center;
+        margin: 0 auto;
     }
 
     /*Serviços*/
