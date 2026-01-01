@@ -1,0 +1,21 @@
+.agendamento{
+    border-top: solid #aed6f1;
+    border-bottom: solid #aed6f1;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-right: 20px;
+    margin-top: 20px;
+    padding-left: 30px;
+}
+
+.agendamento >li{
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.agendamento ul{
+    padding-left: 30px;
+    margin-top: 15px;
+    padding-bottom: 25px;
+    border-bottom: solid #aed6f1;
+}

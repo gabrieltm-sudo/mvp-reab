@@ -3,6 +3,41 @@ import { Link } from "react-router-dom";
 
 const HomeContent = () => {
   return (
+    <>
+      {/* Contextualização do serviço */}
+      <section className="intro-section">
+        <div className="intro-container">
+          <p className="intro-text">
+            O Serviço de Reabilitação Física de Bagé (CNES 2261448) é um serviço
+            municipal com gestão estadual, <strong>referência na região</strong>, dedicado à 
+            reabilitação e melhoria da qualidade de vida dos pacientes.
+          </p>
+          
+          {/* Estatísticas compactas */}
+          <div className="stats-row">
+            <div className="stat-item">
+              <span className="stat-number">100+</span>
+              <span className="stat-label">Pacientes/mês</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">40</span>
+              <span className="stat-label">Municípios</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">24</span>
+              <span className="stat-label">Profissionais</span>
+            </div>
+          </div>
+          
+          {/* CTA simples */}
+          <div className="quick-cta">
+            <Link to="/consulta" className="cta-link">
+              Como agendar sua consulta →
+            </Link>
+          </div>
+        </div>
+      </section>
+
     <section id="content">
       <div className="content-container">
         <div className="content-coluna-container">
@@ -59,6 +94,7 @@ const HomeContent = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 export default HomeContent;

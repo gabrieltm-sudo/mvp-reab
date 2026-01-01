@@ -1,0 +1,49 @@
+.servico-item{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.servico-texto{
+    font-size: 1.2em;
+    width: 60%;
+    padding-right: 30px;
+    padding-left: 40px;
+}
+
+.servico-imagem{
+    width: 40%;
+}
+
+.imagem-servico{
+    max-width: 500px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 90%;
+    margin: 25px auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.50);
+    clear: both;
+}
+
+figcaption{
+    color: #a0a0a0;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+@media screen and (max-width: 768px){
+    .servico-item {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .servico-texto, .servico-imagem {
+        font-size: 0.9em;
+        width: 90%;
+        padding: 0;
+    }
+}

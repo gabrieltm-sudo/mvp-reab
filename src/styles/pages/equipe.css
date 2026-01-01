@@ -1,0 +1,130 @@
+.equipe{
+    border-top: solid #aed6f1;
+    margin-top: 70px;
+    padding: 50px, 15px;
+    background-color: rgb(57, 96, 122);
+    text-align: center;
+}
+
+.equipe p{
+    color: white;
+    padding-top: 15px;
+    font-family: 'Roboto';
+    font-size: 1.7em;
+    padding-bottom: 30px;
+}
+
+.equipe a{
+    color: white;
+}
+
+.equipe-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.equipe h2{
+    color: white;
+    font-size: 2.75em;
+    text-shadow: 2px, 2px, 2px, black;
+    margin-top: 20px;
+}
+
+.cargo-titulo{
+    color: white;
+    font-size: 2.2em;
+    text-align: left !important;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #aed6f1;
+}
+
+.equipe-info p{
+    text-align: center !important;
+    font-weight: bold;
+}
+
+.equipe-cards{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.equipe-card{
+    background-color: rgba(15, 15, 161, 0.377);
+    border-radius: 20px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.equipe-card:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.equipe-card img{
+    width: 120px;
+    min-height: 120px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 3px solid #aed6f1;
+    margin-bottom: 10px;
+}
+
+.equipe-info{
+    text-align: center;
+}
+
+.equipe-info h3{
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.equipe-info p{
+    color: #a0a0a0cc;
+    font-size: 1em;
+}
+
+@media screen and (max-width: 768px){
+    .equipe h2 {
+        font-size: 1.6rem;
+    }
+
+    .equipe-container{
+        padding: 0 10px;
+        font-size: 0.8em;
+        text-align: justify;
+    }
+
+    .equipe-card {
+        width: 45%;
+        padding: 15px;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+
+    .equipe-card img{
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    .equipe-info h3{
+        font-size: 1em;
+        margin-bottom: 7px;
+    }
+
+    .equipe-info p{
+        color: white;
+        font-size: 0.75em;
+    }
+
+    .cargo-titulo {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+}

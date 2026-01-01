@@ -13,13 +13,7 @@ const Cabecalho = () => {
   
   return (
     <div className="cabecalho">
-      <div className="top-bar-container">
-        <p>
-          O Serviço de Reabilitação Física de Bagé (CNES 2261448) é um serviço
-          municipal com gestão estadual, referência na cidade, onde cerca de 100
-          pacientes de 40 munícipios da região são atendidos.
-        </p>
-      </div>
+
       <header>
         <button onClick={abreMenu}  className="menuBurguer">{menuAberto ? <X /> : <MenuIcon />}</button>
         <div id="logo">

@@ -7,8 +7,8 @@ const Cards = () => {
   return (
     <section className="cards">
       <div className="containerclass">
-        <h2><strong>Áreas</strong></h2>
-        <p>Todas as informações necessárias sobre serviços, formas de contato e equipe.</p>
+        <h2 id='sometext-cards'><strong>Áreas</strong></h2>
+        <p id='sometext-cards'>Todas as informações necessárias sobre serviços, formas de contato e equipe.</p>
       </div>
       <div className="containercard">
         {/* Card de Serviços */}

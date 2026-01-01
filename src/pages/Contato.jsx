@@ -2,6 +2,8 @@ import { Inbox, MapPinCheckIcon, Phone } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
 
+import "../styles/pages/contato.css";
+
 const Contato = () => {
   return (
     <>

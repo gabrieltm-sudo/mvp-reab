@@ -4,6 +4,8 @@ import { GiHealing } from "react-icons/gi";
 import { MdOutlineHealthAndSafety } from "react-icons/md";
 import { RiMentalHealthLine } from "react-icons/ri";
 
+import "../styles/pages/equipe.css";
+
 const Equipe = () => {
   return (
     <>

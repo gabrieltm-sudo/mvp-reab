@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(57, 96, 122);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h1, h2, h3{
+    font-family: 'Montserrat';
+}
+
+h1{
+    margin-top: 0;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px 3px #111111;
+}
+
+p{
+    text-shadow: 1px 1px 1px #111111;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify; /* Parágrafos justificados */
+}
+
+/* Elementos de texto que devem ser justificados */
+li,
+.content-coluna p,
+.content-coluna li,
+#content-all p,
+#content-all li,
+.servico-texto,
+.servico-texto p,
+.servico-texto li,
+.agendamento li,
+.agendamento ul li,
+.equipe p {
+    text-align: justify;
+}
+
+/* Elementos que devem ser centralizados */
+h1, h2, h3,
+.card h3,
+.card p,
+nav, nav a,
+#menu, #menu a,
+.button-acess,
+.menuBurguer,
+.top-bar-container,
+.top-bar-container p,
+#table th,
+#table td,
+footer a,
+#LinksSite a,
+.title,
+.title h1 {
+    text-align: center !important;
+}
+
+/* RESPONSIVIDADE GLOBAL */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 0px;
+    }
+
+    /* Títulos responsivos */
+    h1, .title h1 {
+        font-size: 1.8rem;
+    }
+    
+    .equipe h2 {
+        font-size: 1.6rem;
+    }
+}

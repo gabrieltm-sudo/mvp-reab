@@ -2,6 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import "../styles/pages/servicos.css";
+
 const Servicos = () => {
   return (
     <div>

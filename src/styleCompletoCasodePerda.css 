@@ -1,3 +1,5 @@
+/*NÃO ESTÁ EM USO ATUALMENTE*/
+
 /*@tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,6 +37,43 @@ h1{
 p{
     text-shadow: 1px 1px 1px #111111;
     font-family: 'Roboto', sans-serif;
+    text-align: justify; /* Parágrafos justificados */
+}
+
+/* Elementos de texto que devem ser justificados */
+li,
+.content-coluna p,
+.content-coluna li,
+#content-all p,
+#content-all li,
+.servico-texto,
+.servico-texto p,
+.servico-texto li,
+.agendamento li,
+.agendamento ul li,
+.equipe p {
+    text-align: justify;
+}
+
+/* Elementos que devem ser centralizados */
+h1, h2, h3,
+.card h3,
+.card p,
+nav, nav a,
+#menu, #menu a,
+.button-acess,
+.equipe-info h3,
+.menuBurguer,
+.top-bar-container,
+.top-bar-container p,
+.cargo-titulo,
+#table th,
+#table td,
+footer a,
+#LinksSite a,
+.title,
+.title h1 {
+    text-align: center !important;
 }
 
 /*Cabeçalho e menu*/
@@ -124,7 +163,119 @@ header{
 
 /*Home*/
 
-#content{
+/* Seção introdutória */
+.intro-section {
+    background: rgb(57, 96, 122);
+    padding: 40px 20px;
+    border-bottom: 2px solid #aed6f1;
+}
+
+.intro-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Estatísticas em linha */
+.stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #aed6f1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9em;
+    color: #e0e0e0;
+    margin-top: 5px;
+}
+
+/* CTA simples */
+.quick-cta {
+    margin-top: 30px;
+}
+
+.cta-link {
+    display: inline-block;
+    color: #aed6f1;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 12px 25px;
+    border: 2px solid #aed6f1;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.cta-link:hover {
+    background: #aed6f1;
+    color: #315d7a;
+}
+
+/* Responsividade da seção introdutória */
+@media screen and (max-width: 768px) {
+    .intro-section {
+        padding: 30px 15px;
+    }
+    
+    .intro-text {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+    
+    .stats-row {
+        gap: 25px;
+        margin: 20px 0;
+    }
+    
+    .stat-number {
+        font-size: 1.5em;
+    }
+    
+    .stat-label {
+        font-size: 0.8em;
+    }
+    
+    .cta-link {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .stats-row {
+        gap: 20px;
+    }
+    
+    .stat-number {
+        font-size: 1.4em;
+    }
+}
+
+/* Conteúdo principal da home */#content{
     background: rgb(57, 96, 122);
     padding: 60px 20px;
 }
@@ -229,18 +380,25 @@ header{
     box-shadow: 0 10px 30px black;
 }
 
+#sometext-cards{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .card h3{
     color: black;
     margin-bottom: 5px;
-    font-size: 25px;
+    font-size: 1.545em;
+    text-align: center;
 }
 
 .card p{
-    color: #555;
+    color: black;
     line-height: 1.5;
     flex-grow: 1;
     margin-bottom: 15px;
     text-shadow: none;
+    text-align: justify;
 }
 
 .card-button{
@@ -868,4 +1026,17 @@ h4{
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* Justificar textos longos específicos */
+.content-coluna p,
+.content-coluna li,
+#content-all p,
+#content-all li,
+.servico-texto,
+.servico-texto p,
+.servico-texto li,
+.agendamento li,
+.agendamento ul li {
+    text-align: justify !important;
 }

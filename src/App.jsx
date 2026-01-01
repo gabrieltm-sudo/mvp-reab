@@ -15,7 +15,13 @@ import Contato from "./pages/Contato";
 import Consulta from "./pages/Consulta";
 import Equipe from "./pages/Equipe";
 
-import "./style.css";
+import "./styles/global.css";
+import "./styles/shared.css";
+import "./styles/layout/header.css";
+import "./styles/layout/footer.css";
+import "./styles/component/acessibilidadeBotao.css";
+import "./styles/component/spinnerLoading.css";
+
 import ScrollToTop from "./components/common/ScrollToTop";
 import { useRouteLoading } from "./hooks/useLoading";
 import { theme } from './theme';

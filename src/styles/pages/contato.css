@@ -1,0 +1,46 @@
+#contato-list{
+    padding-bottom: 30px;
+    border-bottom: solid #aed6f1;
+}
+
+/*Tabela - Formas de Contato*/
+table{
+    margin: 50px 0;
+    min-width: 75%;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-spacing: 0;
+    padding:0 15px;
+    font-size: 1.4em;
+}
+
+#horarios{
+    text-align: center;
+}
+
+tr:hover{
+    background-color: rgba(0, 0, 0, 0.50);
+    border-radius: 20px;
+    cursor: context-menu;
+}
+
+@media screen and (max-width: 768px) {
+    #content-all p{
+        font-size: 1.4em;
+    }
+
+    #contato-list{
+        padding: 0 15px 25px;
+        font-size: 0.8em;
+    }
+
+    #table{
+        width: 100%;
+        text-align: justify;
+        font-size: 1.2em;
+    }
+    
+    #table td{
+        padding: 5px 5px;
+    }
+}

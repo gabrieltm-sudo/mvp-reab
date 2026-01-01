@@ -1,0 +1,111 @@
+/*Rodapé*/
+footer{
+    padding: 0 30px;
+    text-align: center;  
+    color: white;
+    background-color: rgb(49, 93, 122);
+    min-height: 90px;
+    font-family: Arial;
+    font-size: 1.1em;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    margin-top: 15px;
+}
+
+footer a.active{
+    
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.ColunasFooter{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#LinksSite{
+    border-right: solid #aed6f1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 15px;
+}
+
+#ContatoFooter{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 15px;
+    border-left: solid #aed6f1;
+    min-height: 240px;
+}
+
+h4{
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+#ContatoFooter p{
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 768px){
+    .ColunasFooter{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer{
+    padding: 0 30px;
+    text-align: center;  
+    color: white;
+    background-color: rgb(49, 93, 122);
+    min-height: 90px;
+    font-family: Arial;
+    font-size: 1.1em;
+    }
+
+    footer a{
+        text-decoration: none;
+        color: white;
+        margin-top: 5px;
+    }   
+    
+    #ContatoFooter{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
+        border-left: none;
+        min-height: 240px;
+    }
+    
+    #ContatoFooter p{
+        margin-top: 5px;
+    }
+
+    footer a.active{
+
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+
+    #LinksSite{
+        border-right: none;
+        border-bottom: solid #aed6f1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
+    }
+
+    h4{
+        margin-top: 5px;
+        font-size: 1.1em;
+    }
+}

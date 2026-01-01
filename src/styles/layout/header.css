@@ -1,0 +1,126 @@
+/*Cabeçalho e menu*/
+.top-bar-container{
+    min-width: 100%;
+    margin: 0 auto;
+    background: rgb(39, 76, 100);
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.top-bar{
+    background: rgb(39, 76, 100);
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 0.9em;
+}
+
+.cabecalho{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header{
+    background-color: rgb(57, 96, 122);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    
+}
+
+#menu a{
+    color: white;
+    padding: 20px 15px;
+    text-decoration: none;
+    text-shadow: 1px 1px black;
+    border-radius: 20px;
+    font-size: 1.2em;
+    position: relative;
+}
+
+#menu a.active{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+#menu a:hover{
+    background-color:rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.menuBurguer{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /*Cabeçalho e menu*/
+    .cabecalho{
+        position: static;
+        margin-bottom: 0;
+    }
+
+    header{
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    header img{
+        width: 80px;
+        height: 80px;
+    }
+
+    #menu{
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        background-color: rgb(49, 93, 122);
+    }
+    
+    #menu.aberto{
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        z-index: 1100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    #menu.aberto a{
+        padding: 8px 5px;
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0;
+        text-shadow: none;
+    }
+
+    .menuBurguer{
+        display: inline-block;
+        position: fixed;
+        top: 105px;
+        right: 20px;
+        z-index: 1200;
+        border: none;
+        background: white;
+
+    }
+
+    .menuBurguer:active:hover{
+        border: none;
+        background: none;
+    }
+}
