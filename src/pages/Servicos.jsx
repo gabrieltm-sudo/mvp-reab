@@ -1,71 +1,154 @@
 // src/Components/Servicos.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Heart, MessageSquare, Wrench, ExternalLink, Info, X } from 'lucide-react';
 
 import "../styles/pages/servicos.css";
 
 const Servicos = () => {
+  const [showFonoModal, setShowFonoModal] = useState(false);
+
+  const servicos = [
+    {
+      id: 1,
+      titulo: "Fisioterapia",
+      icone: <Heart className="servico-icon" />,
+      descricao: "Tratamento fisioterapêutico especializado",
+      detalhes: [
+        "Assistência fisioterapêutica cardiovascular e pneumofuncional",
+        "Assistência fisioterapêutica nas alterações neurológicas", 
+        "Assistência fisioterapêutica nas disfunções músculo-esqueléticas"
+      ],
+      botaoTexto: "Ver Reportagem",
+      botaoLink: "https://globoplay.globo.com/v/4095156/",
+      tipoLink: "externo"
+    },
+    {
+      id: 2,
+      titulo: "Fonoaudiologia",
+      icone: <MessageSquare className="servico-icon" />,
+      descricao: "Tratamento fonoaudiológico especializado",
+      detalhes: [
+        "Avaliação e reabilitação da comunicação",
+        "Tratamento de distúrbios da fala e linguagem",
+        "Terapia para disfagia (dificuldades de deglutição)",
+        "Reabilitação vocal e auditiva"
+      ],
+      botaoTexto: "Saiba Mais",
+      botaoLink: "#",
+      tipoLink: "modal"
+    },
+    {
+      id: 3,
+      titulo: "Órteses e Próteses",
+      icone: <Wrench className="servico-icon" />,
+      descricao: "OPMs - Órteses, Próteses e Meios Auxiliares",
+      detalhes: [
+        "Dispensação de equipamentos",
+        "Substituição quando necessário",
+        "Encaminhamento para confecção, manutenção e adaptação"
+      ],
+      botaoTexto: "Agendar Medição",
+      botaoLink: "https://www.bage.rs.gov.br/noticias/oficina-ortopedica-de-bage-esta-realizando-medicao-de-ortese-e-proteses-1",
+      tipoLink: "externo"
+    }
+  ];
+
+  const handleBotaoClick = (servico) => {
+    if (servico.tipoLink === "modal") {
+      setShowFonoModal(true);
+    } else if (servico.tipoLink === "externo") {
+      window.open(servico.botaoLink, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <div>
       <section>
-        <div id="principal1" className="bg-blue-900 text-white p-6 min-h-screen flex items-center justify-center">
+        <div id="principal1">
           <div className="title">
-            <h1 className="text-4xl font-bold">Serviços prestados pelo Serviço de Reabilitação de Bagé</h1>
+            <h1>Serviços prestados pelo Serviço de Reabilitação de Bagé</h1>
           </div>
         </div>
       </section>
 
-      {/* Conteúdo dos Serviços */}
       <section id="content-all">
-        <p>Dentro dos serviços prestados estão:</p>
-        <br />
-        <div className="servico-item">
-          <div className="servico-texto">
-            <li><strong>Tratamento fisioterapêutico:</strong></li>
-            <br />
-            <ul>
-              <li>Assistência fisioterapêutica cardiovascular e pneumofuncional;</li>
-              <li>Assistência fisioterapêutica nas alterações neurológicas;</li>
-              <li>Assistência fisioterapêutica nas disfunções músculo-esqueléticas.</li>
-            </ul>
-          </div>
-          <div className="servico-imagem">
-            <figure>
-              <a href="https://globoplay.globo.com/v/4095156/" target="_blank" rel="noopener noreferrer">
-                <img src="./images/fisioterapia.jpg" alt="Imagem de fisioterapia" className="imagem-servico" />
-              </a>
-              <figcaption><b>Reportagem da RBS sobre o SRF Bagé</b></figcaption>
-            </figure>
-          </div>
+        <p className="servicos-intro">Dentro dos serviços prestados estão:</p>
+        
+        <div className="servicos-container">
+          {servicos.map((servico) => (
+            <div key={servico.id} className="servico-card">
+              <div className="servico-header">
+                {servico.icone}
+                <h3>{servico.titulo}</h3>
+              </div>
+              
+              <p className="servico-descricao">{servico.descricao}</p>
+              
+              <ul className="servico-detalhes">
+                {servico.detalhes.map((detalhe, index) => (
+                  <li key={index}>{detalhe}</li>
+                ))}
+              </ul>
+              
+              <button 
+                className="servico-botao"
+                onClick={() => handleBotaoClick(servico)}
+              >
+                {servico.botaoTexto}
+                {servico.tipoLink === "externo" ? <ExternalLink size={16} /> : <Info size={16} />}
+              </button>
+            </div>
+          ))}
         </div>
 
-        <br />
-        <div className="servico-item">
-          <div className="servico-texto">
-            <li><strong>Tratamento fonoaudiológico;</strong></li>
+        {/* Modal/Seção Expandida para Fonoaudiologia */}
+        {showFonoModal && (
+          <div className="fono-modal-overlay" onClick={() => setShowFonoModal(false)}>
+            <div className="fono-modal" onClick={(e) => e.stopPropagation()}>
+              <div className="fono-modal-header">
+                <h2><MessageSquare /> Fonoaudiologia - Detalhes do Serviço</h2>
+                <button 
+                  className="fono-modal-close"
+                  onClick={() => setShowFonoModal(false)}
+                >
+                  <X />
+                </button>
+              </div>
+              
+              <div className="fono-modal-content">
+                <div className="fono-section">
+                  <h3>🎯 Áreas de Atuação:</h3>
+                  <ul>
+                    <li><strong>Comunicação:</strong> Avaliação e reabilitação de distúrbios da fala e linguagem</li>
+                    <li><strong>Disfagia:</strong> Tratamento de dificuldades de deglutição</li>
+                    <li><strong>Voz:</strong> Reabilitação vocal para diferentes patologias</li>
+                    <li><strong>Audição:</strong> Avaliação e reabilitação auditiva</li>
+                  </ul>
+                </div>
+                
+                <div className="fono-section">
+                  <h3>👥 Público Atendido:</h3>
+                  <ul>
+                    <li>Crianças com atraso de desenvolvimento da fala</li>
+                    <li>Adultos com alterações neurológicas</li>
+                    <li>Pacientes pós-AVC</li>
+                    <li>Pessoas com dificuldades de deglutição</li>
+                  </ul>
+                </div>
+                
+                <div className="fono-actions">
+                  <Link to="/contato" className="fono-action-btn primary">
+                    Agendar Consulta
+                  </Link>
+                  <Link to="/equipe" className="fono-action-btn secondary">
+                    Conhecer Equipe
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div className="servico-item">
-          <div className="servico-texto">
-            <br />
-            <li><strong>Órteses, Próteses e Meios Auxiliares de Locomoção (OPMs):</strong></li>
-            <br />
-            <ul>
-              <li>Dispensação;</li>
-              <li>Substituição;</li>
-              <li>Encaminhamento para a <a href="https://www.bage.rs.gov.br/noticias/oficina-ortopedica-de-bage-esta-realizando-medicao-de-ortese-e-proteses-1" target="_blank" rel="noopener noreferrer">confecção, manutenção e adaptação</a>.</li>
-            </ul>
-          </div>
-          <div className="servico-imagem">
-            <figure>
-              <a href="https://www.bage.rs.gov.br/noticias/oficina-ortopedica-de-bage-esta-realizando-medicao-de-ortese-e-proteses-1" target="_blank" rel="noopener noreferrer">
-                <img src="./images/orteses.jpeg" alt="Imagem de órtese ou protese" className="imagem-servico" />
-              </a>
-              <figcaption><b>Medição de órteses e próteses</b></figcaption>
-            </figure>
-          </div>
-        </div>
+        )}
       </section>
     </div>
   );

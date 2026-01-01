@@ -1,49 +1,296 @@
-.servico-item{
-    display: flex;
-    align-items: center;
-    margin-top: 40px;
-}
+/* Serviços - Layout Cards Moderno */
 
-.servico-texto{
-    font-size: 1.2em;
-    width: 60%;
-    padding-right: 30px;
-    padding-left: 40px;
-}
-
-.servico-imagem{
-    width: 40%;
-}
-
-.imagem-servico{
-    max-width: 500px;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    width: 90%;
-    margin: 25px auto;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.50);
-    clear: both;
-}
-
-figcaption{
-    color: #a0a0a0;
+.servicos-intro {
     text-align: center;
-    font-size: 15px;
-    margin-top: 5px;
-    font-style: italic;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #f0f0f0;
 }
 
-@media screen and (max-width: 768px){
-    .servico-item {
-        flex-direction: column;
+.servicos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.servico-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid rgba(174, 214, 241, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+}
+
+.servico-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #aed6f1;
+}
+
+.servico-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.servico-icon {
+    width: 40px;
+    height: 40px;
+    color: #aed6f1;
+    stroke-width: 2;
+}
+
+.servico-header h3 {
+    color: white;
+    font-size: 1.8em;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.servico-descricao {
+    color: #e0e0e0;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.servico-detalhes {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.servico-detalhes li {
+    color: #f0f0f0;
+    padding: 8px 0;
+    position: relative;
+    padding-left: 20px;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+.servico-detalhes li::before {
+    content: "▸";
+    color: #aed6f1;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.servico-botao {
+    background: linear-gradient(45deg, #315d7a, #aed6f1);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.servico-botao:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(174, 214, 241, 0.4);
+    background: linear-gradient(45deg, #aed6f1, #315d7a);
+}
+
+/* Modal Fonoaudiologia */
+.fono-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.fono-modal {
+    background: rgb(57, 96, 122);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 2px solid #aed6f1;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.fono-modal-header {
+    padding: 25px 30px;
+    border-bottom: 1px solid #aed6f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(174, 214, 241, 0.1);
+    border-radius: 20px 20px 0 0;
+}
+
+.fono-modal-header h2 {
+    color: white;
+    margin: 0;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fono-modal-close {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.fono-modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.fono-modal-content {
+    padding: 30px;
+}
+
+.fono-section {
+    margin-bottom: 30px;
+}
+
+.fono-section h3 {
+    color: #aed6f1;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fono-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.fono-section li {
+    color: #f0f0f0;
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.fono-section li::before {
+    content: "✓";
+    color: #aed6f1;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.fono-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.fono-action-btn {
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+}
+
+.fono-action-btn.primary {
+    background: linear-gradient(45deg, #315d7a, #aed6f1);
+    color: white;
+}
+
+.fono-action-btn.secondary {
+    background: transparent;
+    color: #aed6f1;
+    border: 2px solid #aed6f1;
+}
+
+.fono-action-btn:hover {
+    transform: translateY(-2px);
+}
+
+.fono-action-btn.primary:hover {
+    box-shadow: 0 5px 15px rgba(174, 214, 241, 0.4);
+}
+
+.fono-action-btn.secondary:hover {
+    background: rgba(174, 214, 241, 0.1);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .servicos-container {
+        grid-template-columns: 1fr;
         gap: 20px;
+        padding: 0 15px;
     }
     
-    .servico-texto, .servico-imagem {
-        font-size: 0.9em;
-        width: 90%;
-        padding: 0;
+    .servico-card {
+        padding: 25px;
+        min-height: auto;
+    }
+    
+    .servico-header h3 {
+        font-size: 1.5em;
+    }
+    
+    .servico-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .fono-modal {
+        width: 95%;
+        margin: 10px;
+    }
+    
+    .fono-modal-header {
+        padding: 20px;
+    }
+    
+    .fono-modal-header h2 {
+        font-size: 1.2em;
+    }
+    
+    .fono-modal-content {
+        padding: 20px;
+    }
+    
+    .fono-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .fono-action-btn {
+        min-width: auto;
     }
 }

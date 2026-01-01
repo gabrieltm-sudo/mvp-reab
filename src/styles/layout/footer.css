@@ -42,6 +42,11 @@ footer a.active{
     padding: 20px 15px;
     border-left: solid #aed6f1;
     min-height: 240px;
+    height: 278px;
+}
+
+#ContatoFooter a{
+    text-align: left !important;
 }
 
 h4{
@@ -84,7 +89,7 @@ h4{
         min-height: 240px;
     }
     
-    #ContatoFooter p{
+    #ContatoFooter a{
         margin-top: 5px;
     }
 
