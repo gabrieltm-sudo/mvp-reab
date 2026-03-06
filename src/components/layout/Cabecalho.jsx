@@ -1,7 +1,9 @@
 // src/Cabecalho.js
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { MenuIcon, X } from "lucide-react";
+// 🚀 PERFORMANCE - Imports específicos
+import MenuIcon from "lucide-react/dist/esm/icons/menu";
+import X from "lucide-react/dist/esm/icons/x";
 import { useState } from "react";
 
 const Cabecalho = () => {
@@ -15,7 +17,14 @@ const Cabecalho = () => {
     <div className="cabecalho">
 
       <header>
-        <button onClick={abreMenu}  className="menuBurguer">{menuAberto ? <X /> : <MenuIcon />}</button>
+        <button 
+          onClick={abreMenu}  
+          className="menuBurguer"
+          aria-label={menuAberto ? "Fechar menu de navegação" : "Abrir menu de navegação"}
+          aria-expanded={menuAberto}
+        >
+          {menuAberto ? <X color="white" size="28"/> : <MenuIcon color="white" size="28"/>}
+        </button>
         <div id="logo">
           <a href="https://www.bage.rs.gov.br/secretarias/secretaria-de-saude" target="_blank" rel="noopener noreferrer">
             <img
@@ -26,6 +35,7 @@ const Cabecalho = () => {
           </a>
         </div>
         <nav id="menu" className={menuAberto ? "aberto" : ""}>
+          <div className="menu-title">Navegação</div>
           <NavLink onClick={abreMenu} to="/">Home</NavLink>
           <NavLink onClick={abreMenu} to="/servicos">Serviços</NavLink>
           <NavLink onClick={abreMenu} to="/contato">Formas de contato</NavLink>

@@ -33,7 +33,7 @@ function Acessibilidade() {
       
       <IconButton
         onClick={aumentarFonte}
-        aria-label="Aumentar tamanho da fonte"
+        aria-label="Aumentar tamanho da fonte em 2 pontos"
         sx={{
           color: 'black',
           backgroundColor: 'white',
@@ -50,7 +50,7 @@ function Acessibilidade() {
 
       <IconButton
         onClick={diminuirFonte}
-        aria-label="Diminuir tamanho da fonte"
+        aria-label="Diminuir tamanho da fonte em 2 pontos"
         sx={{
           color: 'black',
           backgroundColor: 'white',

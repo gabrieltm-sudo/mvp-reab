@@ -4,9 +4,9 @@
     background-image: url(../components/ui/backgroundok.png);
     background-size: cover;
     background-position: center center;
-    font-size: xx-large;
+    font-size: clamp(1.5rem, 4vw, 3rem);
     padding: 0 30px;
-    min-height: 80vh;      /*Testar tamanhos*/
+    min-height: clamp(60vh, 80vh, 90vh);
     color: white;
     text-align: left;
     display: flex;
@@ -35,7 +35,8 @@
 }
 
 .title h1{
-    font-size: 50px;
+    font-size: clamp(1.8rem, 6vw, 3.2rem);
+    line-height: 1.2;
 }
 
 #content-all{        /*serviços, contato, consulta, ...*/
@@ -62,8 +63,9 @@
     
     #principal1 {
         margin-top: 0;
-        padding: 40px 15px;
-        min-height: auto;
+        padding: 20px 15px;
+        min-height: 70vh;
+        text-align: center;
     }
 
     #effect, .title {
@@ -80,6 +82,17 @@
     }
     
     #content-all p{
-        font-size: 1.4em;
+        font-size: clamp(1.2rem, 3vw, 1.4rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #principal1 {
+        min-height: 60vh;
+        padding: 15px 10px;
+    }
+    
+    .title {
+        padding: 20px 15px;
     }
 }

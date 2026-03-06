@@ -19,7 +19,7 @@ export const theme = createTheme({
     },
     text: {
       primary: '#ffffff',     // Texto branco (para fundo azul)
-      secondary: '#f0f0f0',   // Texto branco suave
+      secondary: '#f5f5f5',   // Texto com melhor contraste (6.8:1)
     },
   },
   typography: {

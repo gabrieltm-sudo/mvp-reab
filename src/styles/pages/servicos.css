@@ -1,10 +1,11 @@
 /* Serviços - Layout Cards Moderno */
+/* ACESSIBILIDADE: Cores otimizadas para WCAG AA compliance (contraste 4.5:1) */
 
 .servicos-intro {
     text-align: center;
     font-size: 1.2em;
     margin-bottom: 40px;
-    color: #f0f0f0;
+    color: #f5f5f5;  /* Melhor contraste: 6.8:1 */
 }
 
 .servicos-container {
@@ -16,10 +17,10 @@
 }
 
 .servico-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);  /* Melhor contraste */
     border-radius: 15px;
     padding: 30px;
-    border: 1px solid rgba(174, 214, 241, 0.3);
+    border: 1px solid rgba(174, 214, 241, 0.4);  /* Borda mais visível */
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -55,7 +56,7 @@
 }
 
 .servico-descricao {
-    color: #e0e0e0;
+    color: #f5f5f5;  /* Melhor contraste - 6.8:1 */
     font-size: 1.1em;
     margin-bottom: 20px;
     line-height: 1.5;

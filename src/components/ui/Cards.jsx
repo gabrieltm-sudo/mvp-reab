@@ -13,7 +13,12 @@ const Cards = () => {
       <div className="containercard">
         {/* Card de Serviços */}
         <div className="card">
-          <img src="images/servicos.jpg" alt="Imagem de equipamentos do SRF" />
+          <img 
+            src="images/servicos.jpg" 
+            alt="Imagem de equipamentos do SRF"
+            loading="lazy"
+            decoding="async"
+          />
           <h3><strong>Serviços</strong></h3>
           <p>Conheça os principais serviços oferecidos para sua reabilitação.</p>
           <Button 
@@ -29,7 +34,12 @@ const Cards = () => {
 
         {/* Card de Como Agendar uma Consulta */}
         <div className="card">
-          <img src="/images/local.jpg" alt="Imagem do prédio do SRF" />
+          <img 
+            src="/images/local.jpg" 
+            alt="Imagem do prédio do SRF"
+            loading="lazy"
+            decoding="async"
+          />
           <h3><strong>Como Agendar uma Consulta</strong></h3>
           <p>Veja como marcar uma consulta e quais documentos necessários.</p>
           <Button 
@@ -45,7 +55,12 @@ const Cards = () => {
 
         {/* Card de Equipe */}
         <div className="card">
-          <img src="/images/equipedesaude.avif" alt="Imagem de uma equipe de saúde" />
+          <img 
+            src="/images/equipedesaude.avif" 
+            alt="Imagem de uma equipe de saúde"
+            loading="lazy"
+            decoding="async"
+          />
           <h3><strong>Equipe</strong></h3>
           <p>Conheça a equipe formada por profissionais dedicados e qualificados.</p>
           <Button 
@@ -61,7 +76,12 @@ const Cards = () => {
         
         {/* Card de Formas de Contato */}
         <div className="card">
-          <img src="images/contato.jpg" alt="Imagem de um celular com símbolos de ligação, e-mail e escrever" />
+          <img 
+            src="images/contato.jpg" 
+            alt="Imagem de um celular com símbolos de ligação, e-mail e escrever"
+            loading="lazy"
+            decoding="async"
+          />
           <h3><strong>Formas de contato</strong></h3>
           <p>O serviço de Reabilitação Física recebe ligações, e-mails, além de atender presencialmente em seu endereço. Tire suas dúvidas aqui.</p>
           <Button 

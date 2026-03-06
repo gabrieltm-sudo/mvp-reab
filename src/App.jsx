@@ -1,5 +1,5 @@
 // src/App.js
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -9,11 +9,12 @@ import Footer from "./components/layout/Footer";
 import Acessibilidade from "./components/common/Acessibilidade";
 import LoadingSpinner from "./components/ui/LoadingSpinner";
 
-import Home from "./pages/Home";
-import Servicos from "./pages/Servicos";
-import Contato from "./pages/Contato";
-import Consulta from "./pages/Consulta";
-import Equipe from "./pages/Equipe";
+// 🚀 LAZY LOADING - Páginas carregam sob demanda
+const Home = lazy(() => import("./pages/Home"));
+const Servicos = lazy(() => import("./pages/Servicos"));
+const Contato = lazy(() => import("./pages/Contato"));
+const Consulta = lazy(() => import("./pages/Consulta"));
+const Equipe = lazy(() => import("./pages/Equipe"));
 
 import "./styles/global.css";
 import "./styles/shared.css";
@@ -26,9 +27,9 @@ import ScrollToTop from "./components/common/ScrollToTop";
 import { useRouteLoading } from "./hooks/useLoading";
 import { theme } from './theme';
 
-// Componente limpo que usa o hook
+// Componente com loading suave para transições
 const AppContent = () => {
-  const isLoading = useRouteLoading(300); // 300ms de loading
+  const isLoading = useRouteLoading(300); // 300ms de loading suave
 
   if (isLoading) {
     return <LoadingSpinner message="Carregando página..." />;
@@ -53,7 +54,12 @@ const App = () => {
         <ScrollToTop />
         <div>
           <Cabecalho />
-          <AppContent />
+          
+          {/* Suspense wrapper para lazy loading */}
+          <Suspense fallback={<LoadingSpinner message="Carregando página..." />}>
+            <AppContent />
+          </Suspense>
+          
           <Acessibilidade />
           <Footer />
         </div>

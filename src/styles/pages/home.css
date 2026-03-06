@@ -4,7 +4,7 @@
 .intro-section {
     background: rgb(57, 96, 122);
     padding: 40px 20px;
-    border-bottom: 2px solid #aed6f1;
+    max-height: 280px;
 }
 
 .intro-container {

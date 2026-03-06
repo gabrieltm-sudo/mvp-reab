@@ -58,6 +58,11 @@ header{
     transition: 0.5s;
 }
 
+/* Esconde título de navegação no desktop */
+.menu-title {
+    display: none;
+}
+
 .menuBurguer{
     display: none;
 }
@@ -100,6 +105,18 @@ header{
         height: 100vh;
     }
 
+    /* Exibe título da navegação no menu mobile */
+    #menu.aberto .menu-title {
+        display: block;
+        color: #aed6f1;
+        font-weight: bold;
+        font-size: 1.3em;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        font-family: 'Montserrat', sans-serif;
+    }
+
     #menu.aberto a{
         padding: 8px 5px;
         display: block;
@@ -110,12 +127,13 @@ header{
 
     .menuBurguer{
         display: inline-block;
+        padding: auto;
         position: fixed;
-        top: 105px;
+        top: 20px;
         right: 20px;
         z-index: 1200;
         border: none;
-        background: white;
+        background: rgba(0, 0, 0, 0.2);
 
     }
 

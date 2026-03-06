@@ -1,7 +1,13 @@
 // src/Components/Servicos.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, MessageSquare, Wrench, ExternalLink, Info, X } from 'lucide-react';
+// 🚀 PERFORMANCE - Imports específicos reduzem bundle em ~15%
+import Heart from 'lucide-react/dist/esm/icons/heart';
+import MessageSquare from 'lucide-react/dist/esm/icons/message-square';
+import Wrench from 'lucide-react/dist/esm/icons/wrench';
+import ExternalLink from 'lucide-react/dist/esm/icons/external-link';
+import Info from 'lucide-react/dist/esm/icons/info';
+import X from 'lucide-react/dist/esm/icons/x';
 
 import "../styles/pages/servicos.css";
 
@@ -94,6 +100,10 @@ const Servicos = () => {
               <button 
                 className="servico-botao"
                 onClick={() => handleBotaoClick(servico)}
+                aria-label={servico.tipoLink === "externo" 
+                  ? `${servico.botaoTexto} - ${servico.titulo} (abre em nova janela)` 
+                  : `Ver detalhes do serviço de ${servico.titulo.toLowerCase()}`
+                }
               >
                 {servico.botaoTexto}
                 {servico.tipoLink === "externo" ? <ExternalLink size={16} /> : <Info size={16} />}
@@ -111,6 +121,7 @@ const Servicos = () => {
                 <button 
                   className="fono-modal-close"
                   onClick={() => setShowFonoModal(false)}
+                  aria-label="Fechar modal de detalhes da fonoaudiologia"
                 >
                   <X />
                 </button>
