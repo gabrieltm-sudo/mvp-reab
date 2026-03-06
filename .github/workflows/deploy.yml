@@ -1,7 +1,7 @@
 name: Deploy Vite Site
 on:
   push:
-    branches: ["main"] # Toda vez que você der push na main, o site atualiza
+    branches: ["main"] #branch
 permissions:
   contents: read
   pages: write
