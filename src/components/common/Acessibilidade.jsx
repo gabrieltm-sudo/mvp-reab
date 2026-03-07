@@ -1,5 +1,5 @@
 import { AArrowDown, AArrowUp } from 'lucide-react';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { IconButton } from '@mui/material';
 
 function Acessibilidade() {
@@ -9,13 +9,22 @@ function Acessibilidade() {
   const tamMax = 28;
   const tamMin = 12;
 
+  useEffect(() => {
+    const fonteSalva = localStorage.getItem('fontSize');
+    if (fonteSalva) {
+      const tamanho = parseInt(fonteSalva, 10);
+      setFontSize(tamanho);
+      document.body.style.fontSize = `${tamanho}px`;
+    }
+  }, []);
+
   const aumentarFonte = () => {
     const novoTamanho = fontSize + passo;
 
     if (novoTamanho <= tamMax) {
       setFontSize(novoTamanho);
-      
       document.body.style.fontSize = `${novoTamanho}px`;
+      localStorage.setItem('fontSize', novoTamanho.toString());
     }
   };
 
@@ -25,6 +34,7 @@ function Acessibilidade() {
     if (novoTamanho >= tamMin) {
       setFontSize(novoTamanho);
       document.body.style.fontSize = `${novoTamanho}px`;
+      localStorage.setItem('fontSize', novoTamanho.toString());
     }
   };
 
