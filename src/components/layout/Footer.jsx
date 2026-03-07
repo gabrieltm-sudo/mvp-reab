@@ -19,15 +19,24 @@ const Footer = () => {
         </div>
         <div className="Coluna-Footer">
           <div id="ContatoFooter">
-          <h4>Contato</h4>
-            <a href="mailto:reabilitacaofisica.sms@bage.rs.gov.br" target="_blank" rel="noopener noreferrer">
+            <h4>Contato</h4>
+            <a 
+             href="mailto:reabilitacaofisica.sms@bage.rs.gov.br"
+             target="_blank" 
+             rel="noopener noreferrer">
               <Inbox size={20} style={{ marginRight: "5px" }} />{" "}
               reabilitacaofisica.sms@bage.rs.gov.br
             </a>
-            <p>
+            <a 
+             href="tel:+555332427494" 
+             target="_blank" 
+             rel="noopener noreferrer">
               <Phone size={20} style={{ marginRight: "5px" }} /> (53) 3242-7494
-            </p>
-            <a href="https://maps.app.goo.gl/2nJTHhcy5BPZXT5g6" target="_blank" rel="noopener noreferrer">
+            </a>
+            <a 
+             href="https://maps.app.goo.gl/2nJTHhcy5BPZXT5g6" 
+             target="_blank" 
+             rel="noopener noreferrer">
               <MapPinCheckIcon size={20} style={{ marginRight: "5px" }} />{" "}
               Avenida Marechal Floriano, 2265, Centro, Bagé - RS, CEP: 96400011
             </a>

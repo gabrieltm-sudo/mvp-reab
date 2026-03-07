@@ -67,22 +67,42 @@ header{
     display: none;
 }
 
+@media (max-width: 1024px) {
+    header{
+        padding: 10px 20px;
+    }
+    
+    #menu a{
+        font-size: 1.1em;
+        padding: 15px 10px;
+    }
+    
+    .top-bar-container, .top-bar{
+        font-size: 0.85em;
+        padding: 8px 10px;
+    }
+}
+
 @media (max-width: 768px) {
-    /*Cabeçalho e menu*/
     .cabecalho{
         position: static;
         margin-bottom: 0;
     }
+    
+    .top-bar-container, .top-bar{
+        font-size: 0.8em;
+        padding: 8px 10px;
+    }
 
     header{
         flex-direction: column;
-        gap: 15px;
-        padding: 15px;
+        gap: 10px;
+        padding: 12px;
     }
 
     header img{
-        width: 80px;
-        height: 80px;
+        width: 75px;
+        height: 75px;
     }
 
     #menu{
@@ -103,42 +123,77 @@ header{
         left: 0;
         width: 100%;
         height: 100vh;
+        padding: 20px;
     }
 
-    /* Exibe título da navegação no menu mobile */
     #menu.aberto .menu-title {
         display: block;
         color: #aed6f1;
         font-weight: bold;
-        font-size: 1.3em;
-        margin-bottom: 20px;
-        padding-bottom: 10px;
+        font-size: 1.4em;
+        margin-bottom: 25px;
+        padding-bottom: 12px;
         border-bottom: 2px solid rgba(255, 255, 255, 0.2);
         font-family: 'Montserrat', sans-serif;
     }
 
     #menu.aberto a{
-        padding: 8px 5px;
+        padding: 12px 10px;
         display: block;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 0;
         text-shadow: none;
+        font-size: 1.1em;
+        width: 100%;
+        max-width: 400px;
     }
 
     .menuBurguer{
         display: inline-block;
-        padding: auto;
+        padding: 8px;
         position: fixed;
         top: 20px;
         right: 20px;
         z-index: 1200;
         border: none;
         background: rgba(0, 0, 0, 0.2);
-
+        border-radius: 8px;
     }
 
     .menuBurguer:active:hover{
         border: none;
-        background: none;
+        background: rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar-container, .top-bar{
+        font-size: 0.75em;
+        padding: 6px 8px;
+    }
+    
+    header{
+        padding: 10px;
+    }
+    
+    header img{
+        width: 65px;
+        height: 65px;
+    }
+    
+    #menu.aberto .menu-title {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+    
+    #menu.aberto a{
+        padding: 10px 8px;
+        font-size: 1em;
+    }
+    
+    .menuBurguer{
+        top: 15px;
+        right: 15px;
+        padding: 6px;
     }
 }

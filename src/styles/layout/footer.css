@@ -12,7 +12,8 @@ footer{
 footer a{
     text-decoration: none;
     color: white;
-    margin-top: 15px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 footer a.active{
@@ -25,14 +26,45 @@ footer a.active{
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
+    gap: 0;
+    position: relative;
+}
+
+.ColunasFooter::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    bottom: 20px;
+    width: 1px;
+    background-color: #aed6f1;
+    transform: translateX(-50%);
+}
+
+.Coluna-Footer{
+    flex: 1;
 }
 
 #LinksSite{
-    border-right: solid #aed6f1;
+    border-right: none;
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 20px 15px;
+    align-items: center;
+}
+
+#LinksSite h3{
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#LinksSite a:hover{
+    text-decoration: underline;
+    padding: 5px;
+    text-decoration-color: #aed6f1;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
 }
 
 #ContatoFooter{
@@ -40,13 +72,37 @@ footer a.active{
     flex-direction: column;
     text-align: center;
     padding: 20px 15px;
-    border-left: solid #aed6f1;
     min-height: 240px;
     height: 278px;
+    align-items: center;
+}
+
+#ContatoFooter h4{
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 #ContatoFooter a{
-    text-align: left !important;
+    text-align: center !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+#ContatoFooter a:hover{
+    text-decoration: underline;
+    padding: 5px;
+    text-decoration-color: #aed6f1;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+}
+
+#ContatoFooter svg{
+    flex-shrink: 0;
 }
 
 h4{
@@ -54,51 +110,79 @@ h4{
     font-size: 1.1em;
 }
 
-#ContatoFooter p{
-    margin-top: 15px;
+@media screen and (max-width: 1024px){
+    footer{
+        font-size: 1em;
+        padding: 0 20px;
+    }
+    
+    #ContatoFooter{
+        min-height: auto;
+        height: auto;
+    }
+    
+    .ColunasFooter::before {
+        top: 10px;
+        bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 768px){
     .ColunasFooter{
         flex-direction: column;
         align-items: center;
+        gap: 0;
+    }
+    
+    .ColunasFooter::before {
+        display: none;
     }
     
     footer{
-    padding: 0 30px;
-    text-align: center;  
-    color: white;
-    background-color: rgb(49, 93, 122);
-    min-height: 90px;
-    font-family: Arial;
-    font-size: 1.1em;
+        padding: 20px 15px;
+        text-align: center;  
+        color: white;
+        background-color: rgb(49, 93, 122);
+        min-height: auto;
+        font-family: Arial;
+        font-size: 0.95em;
     }
 
     footer a{
         text-decoration: none;
         color: white;
-        margin-top: 5px;
+        margin-top: 8px;
+        word-break: break-word;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        flex-wrap: wrap;
     }   
     
     #ContatoFooter{
         display: flex;
         flex-direction: column;
         text-align: center;
-        padding: 20px 15px;
+        padding: 20px 10px;
         border-left: none;
-        min-height: 240px;
+        min-height: auto;
+        height: auto;
+        width: 100%;
     }
     
     #ContatoFooter a{
-        margin-top: 5px;
+        margin-top: 8px;
+        font-size: 0.9em;
+        line-height: 1.4;
+        justify-content: center;
+        text-align: center !important;
     }
 
     footer a.active{
-
         font-weight: bold;
         text-decoration: underline;
     }
-
 
     #LinksSite{
         border-right: none;
@@ -106,11 +190,48 @@ h4{
         display: flex;
         flex-direction: column;
         text-align: center;
-        padding: 20px 15px;
+        padding: 20px 10px;
+        width: 100%;
+    }
+    
+    #LinksSite h3{
+        font-size: 1.1em;
+        margin-bottom: 10px;
     }
 
     h4{
         margin-top: 5px;
+        margin-bottom: 10px;
         font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 480px){
+    footer{
+        font-size: 0.85em;
+        padding: 15px 10px;
+    }
+    
+    footer a{
+        font-size: 0.85em;
+    }
+    
+    #ContatoFooter a{
+        font-size: 0.8em;
+        padding: 5px;
+        justify-content: center;
+    }
+    
+    #ContatoFooter p{
+        font-size: 0.8em;
+        margin-top: 10px;
+    }
+    
+    #LinksSite h3{
+        font-size: 1em;
+    }
+    
+    h4{
+        font-size: 1em;
     }
 }
