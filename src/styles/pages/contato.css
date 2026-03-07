@@ -3,15 +3,27 @@
     border-bottom: solid #aed6f1;
 }
 
+#contato-list li{
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+#contato-list a{
+    word-break: break-all;
+    overflow-wrap: anywhere;
+}
+
 /*Tabela - Formas de Contato*/
 table{
     margin: 50px 0;
-    min-width: 75%;
+    width: 100%;
+    max-width: 75%;
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.3);
     border-spacing: 0;
     padding:0 15px;
     font-size: 1.4em;
+    table-layout: auto;
 }
 
 #horarios{
@@ -30,17 +42,67 @@ tr:hover{
     }
 
     #contato-list{
-        padding: 0 15px 25px;
-        font-size: 0.8em;
+        padding: 0 10px 25px;
+        font-size: 0.85em;
+    }
+    
+    #contato-list li{
+        padding-right: 5px;
+    }
+
+    table{
+        font-size: 1em;
+        max-width: 100%;
+        margin: 30px auto;
     }
 
     #table{
         width: 100%;
-        text-align: justify;
-        font-size: 1.2em;
+        text-align: center;
+        font-size: 0.95em;
     }
     
     #table td{
-        padding: 5px 5px;
+        padding: 8px 5px;
+        font-size: 0.9em;
+    }
+    
+    #table th{
+        padding: 8px 5px;
+        font-size: 0.95em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #contato-list{
+        padding: 0 5px 25px;
+        font-size: 0.8em;
+    }
+    
+    table{
+        font-size: 0.85em;
+        margin: 30px auto;
+        max-width: 100%;
+        padding: 0 8px;
+    }
+    
+    #table{
+        font-size: 0.85em;
+    }
+    
+    #table td{
+        padding: 6px 3px;
+        font-size: 0.85em;
+        word-break: break-word;
+    }
+    
+    #table th{
+        padding: 6px 3px;
+        font-size: 0.9em;
+    }
+    
+    #horarios{
+        white-space: normal;
+        line-height: 1.4;
     }
 }

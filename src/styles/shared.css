@@ -79,10 +79,15 @@
 
     #content-all{
         padding: 60px 15px;
+        overflow-x: hidden;
     }
     
     #content-all p{
         font-size: clamp(1.2rem, 3vw, 1.4rem);
+    }
+    
+    #content-all li{
+        font-size: 1.3em;
     }
 }
 
@@ -90,6 +95,15 @@
     #principal1 {
         min-height: 60vh;
         padding: 15px 10px;
+    }
+    
+    #content-all{
+        padding: 40px 10px;
+        overflow-x: hidden;
+    }
+    
+    #content-all li{
+        font-size: 1.2em;
     }
     
     .title {

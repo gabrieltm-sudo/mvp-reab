@@ -79,8 +79,16 @@
     }
     
     .intro-text {
-        font-size: 1em;
+        font-size: 1.05em;
         padding: 0 10px;
+    }
+    
+    #content{
+        padding: 40px 15px;
+    }
+    
+    .content-container{
+        font-size: 1.05em;
     }
     
     .stats-row {

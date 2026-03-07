@@ -30,7 +30,11 @@ const Contato = () => {
           </a>
         </li>
         <li>
-          <Phone /> <strong>Telefone:</strong> {" "}(53) 3242-7494
+          
+          <Phone /> <strong>Telefone: </strong> 
+          <a href="tel:+555332427494" target="_blank" rel="noopener noreferrer">
+            (53) 3242-7494
+          </a>
         </li>
         <li>
           <MapPinCheckIcon /> <strong>Endereço:</strong>{" "}
