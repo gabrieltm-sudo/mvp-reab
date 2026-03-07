@@ -1,10 +1,15 @@
 # Serviço de Reabilitação Física de Bagé - MVP
 
+[![Deploy](https://img.shields.io/badge/Deploy-Online-green?style=for-the-badge&logo=vercel)](https://srf.gabriel-sudo.me)
+
 Projeto MVP desenvolvido para o Serviço de Reabilitação Física de Bagé - RS, com informações sobre serviços de fisioterapia, fonoaudiologia e ortopedia.
 
 ---
 
-## � Demonstração
+## 📸 Demonstração
+
+Você pode acessar a versão funcional do projeto através do link abaixo:  
+🔗 **[srf.gabriel-sudo.me](https://srf.gabriel-sudo.me)**
 
 ### Desktop
 ![Página inicial - Desktop](/public/images/webdemonstracao.png)
@@ -14,7 +19,7 @@ Projeto MVP desenvolvido para o Serviço de Reabilitação Física de Bagé - RS
 
 ---
 
-## �📋 Sobre
+## 📋 Sobre
 
 Site institucional criado como MVP para apresentar os serviços de reabilitação física oferecidos à comunidade de Bagé. O projeto foca em acessibilidade e responsividade para atender idosos, pessoas com deficiência e seus familiares.
 
@@ -72,7 +77,7 @@ Os arquivos otimizados estarão em `/dist`
 - 5 páginas completas (Home, Serviços, Equipe, Consulta, Contato)
 - Navegação por rotas com React Router
 - Botões de acessibilidade (ajuste de tamanho de fonte)
-- Design responsivo (desktop, tablet, mobile)
+- Design responsivo (desktop e mobile)
 - Cards modernos com informações dos serviços
 - Menu hambúrguer no mobile
 - Tabela de horários de atendimento
