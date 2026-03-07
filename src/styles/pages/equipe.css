@@ -53,17 +53,26 @@
 }
 
 .equipe-card{
-    background-color: rgba(15, 15, 161, 0.377);
-    border-radius: 20px;
+    background: white;
+    border-radius: 25px;
     width: 300px;
     padding: 20px;
     text-align: center;
     margin-bottom: 30px;
     margin-top: 30px;
+    box-shadow: 
+        0 2px 20px rgba(0, 0, 0, 0.06),
+        0 8px 25px rgba(0, 0, 0, 0.04),
+        0 16px 35px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
 }
 
 .equipe-card:hover{
-    background-color: rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 
+        0 4px 30px rgba(0, 0, 0, 0.08),
+        0 12px 40px rgba(0, 0, 0, 0.06),
+        0 20px 50px rgba(0, 0, 0, 0.04);
 }
 
 .equipe-card img{
@@ -80,14 +89,18 @@
 }
 
 .equipe-info h3{
-    color: white;
+    color: #1E3D4A;
     font-size: 1.5em;
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .equipe-info p{
-    color: #a0a0a0cc;
+    color: #404040;
     font-size: 1em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: 500;
 }
 
 @media screen and (max-width: 768px){
@@ -119,8 +132,11 @@
     }
 
     .equipe-info p{
-        color: white;
+        color: #404040;
         font-size: 0.75em;
+        text-shadow: none;
+        text-align: justify;
+        font-weight: 1000;
     }
 
     .cargo-titulo {

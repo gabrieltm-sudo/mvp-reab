@@ -9,7 +9,7 @@ import Footer from "./components/layout/Footer";
 import Acessibilidade from "./components/common/Acessibilidade";
 import LoadingSpinner from "./components/ui/LoadingSpinner";
 
-// 🚀 LAZY LOADING - Páginas carregam sob demanda
+// Páginas carregam sob demanda
 const Home = lazy(() => import("./pages/Home"));
 const Servicos = lazy(() => import("./pages/Servicos"));
 const Contato = lazy(() => import("./pages/Contato"));
