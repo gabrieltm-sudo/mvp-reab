@@ -6,6 +6,212 @@ import { RiMentalHealthLine } from "react-icons/ri";
 
 import "../styles/pages/equipe.css";
 
+const equipeData = [
+  {
+    id: "coordenacao",
+    titulo: "Coordenação (1)",
+    icone: <MdOutlineHealthAndSafety />,
+    profissionais: [
+      {
+        id: 1,
+        nome: "Rosemeri Oliveira Barañano",
+        cargo: "Coordenadora e Fisioterapeuta Geral",
+        foto: "./images/avatar.jpeg"
+      },
+    ],
+  },
+
+  {
+    id: "fisioterapia",
+    titulo: "Equipe de Fisioterapia (9)",
+    icone: <GiHealing />,
+    profissionais: [
+      {
+        id: 2,
+        nome: "Adriano François da Rosa Girason",
+        cargo: "Fisioterapeuta",
+        foto: "./images/avatar.jpeg"
+      },
+      {
+        id: 3,
+        nome: "Alessanda Moreira Ferreira",
+        cargo: "Fisioterapeuta",
+        foto: "./images/avatar.jpeg"
+      },
+      {
+        id: 4,
+        nome: "Danuza Teixeira Corrêa",
+        cargo: "Fisioterapeuta",
+        foto: "./images/avatar.jpeg"
+      },
+      {
+        id: 5,
+        nome: "Ionara Zavarese Hoffmeister",
+        cargo: "Fisioterapeuta",
+        foto: "./images/avatar.jpeg"
+      },
+      {
+        id: 6,
+        nome: "Joana da Rocha Bittencourt",
+        cargo: "Fisioterapeuta",
+        foto: "./images/avatar.jpeg"
+      },
+      {
+        id: 7,
+        nome: "Mara Cristina Crosta dos Reis",
+        cargo: "Fisioterapeuta",
+        foto: "./images/avatar.jpeg"
+      },
+      {
+        id: 8,
+        nome: "Marcia Minuzzi Stochero",
+        cargo: "Fisioterapeuta",
+        foto: "./images/avatar.jpeg"
+      },
+      {
+        id: 9,
+        nome: "Tais Silva Ramos Mouchet",
+        cargo: "Fisioterapeuta",
+        foto: "./images/avatar.jpeg"
+      },
+      {
+        id: 10,
+        nome: "Tael Centeno Krolow",
+        cargo: "Fisioterapeuta",
+        foto: "./images/avatar.jpeg"
+      },
+    ],
+    
+  },
+
+  {
+    id: "ortopedia",
+    titulo: "Equipe de Ortodopedia (2)",
+    icone: <GiHealing />,
+    profissionais: [
+      {
+        id: 11,
+        nome: "Alexandre Codevilla Teixeira",
+        cargo: "Médico Ortodopedista e Traumatologista",
+        foto: "./images/avatar.jpeg"
+      },
+      {
+        id: 12,
+        nome: "Carlito Mendonça de Menezes",
+        cargo: "Técnico de Ortopedia",
+        foto: "./images/avatar.jpeg"
+      },
+    ],
+  },
+  {
+    id: "enfermagem",
+    titulo: "Equipe de Enfermagem (1)",
+    icone: <ClipboardPlusIcon />,
+    profissionais: [
+      {
+        id: 13,
+        nome: "Fernanda Reiznautt de Lima Gonçalves Monteiro",
+        cargo: "Enfermeira",
+        foto: "./images/avatar.jpeg"
+      },
+    ]
+  },
+  {
+    id: "terapia",
+    titulo: "Equipe de Terapia (1)",
+    icone: <RiMentalHealthLine />,
+    profissionais: [
+      {
+        id: 14,
+        nome: "Andryelen Haas Gallina",
+        cargo: "Terapeuta Ocupacional",
+        foto: "./images/avatar.jpeg"
+      },
+    ],
+  },
+  {
+    id: "psicologia",
+    titulo: "Equipe de Psicologia (1)",
+    icone: <ClipboardPlusIcon />,
+    profissionais: [ 
+      {
+        id: 15,
+        nome: "Mônica Ester da Silva Mendes",
+        cargo: "Psicólogo Clínico",
+        foto: "./images/avatar.jpeg"
+      },
+    ],
+  },
+  {
+    id: "fonoaudiologia",
+    titulo: "Equipe de Fonoaudiologia (1)",
+    icone: <ClipboardPlusIcon />,
+    profissionais: [
+      {
+        id: 16,
+        nome: "Rosana Britto Maria",
+        cargo: "Fonoaudiologo Geral",
+        foto: "./images/avatar.jpeg"
+      },
+    ],
+  },
+  {
+    id: "apoio-administrativa",
+    titulo: "Equipe de Apoio e Administrativa (8)",
+    icone: <Users2Icon />,
+    profissionais: [
+       {
+        id: 17,
+        nome: "Isabel Cristina Martins Domingues de Souza",
+        cargo: "Assistente Social",
+        foto: "./images/avatar.jpeg"
+      },
+      {
+        id: 18,
+        nome: "Alice Bramardi Valiera",
+        cargo: "Assistente Administrativo",
+        foto: "./images/avatar.jpeg"
+      },
+      {
+        id: 19,
+        nome: "Luciana Rivero Martinez",
+        cargo: "Assistente Administrativo",
+        foto: "./images/avatar.jpeg"
+      },
+      {
+        id: 20,
+        nome: "Ana Carolina de Oliveira Proença",
+        cargo: "Recepcionista, Em Geral",
+        foto: "./images/avatar.jpeg"
+      },
+      {
+        id: 21,
+        nome: "Bianca Rosa da Luz",
+        cargo: "Recepcionista, Em Geral",
+        foto: "./images/avatar.jpeg"
+      },
+      {
+        id: 22,
+        nome: "Isadora Moraes Marques",
+        cargo: "Recepcionista, Em Geral",
+        foto: "./images/avatar.jpeg"
+      },
+      {
+        id: 23,
+        nome: "Lisiane Berdet Jardim",
+        cargo: "Recepcionista, Em Geral",
+        foto: "./images/avatar.jpeg"
+      },
+      {
+        id: 24,
+        nome: "Marcia Ferrer Geleski",
+        cargo: "Recepcionista, Em Geral",
+        foto: "./images/avatar.jpeg"
+      }
+  ],
+}
+]
+
 const Equipe = () => {
   return (
     <>
@@ -29,233 +235,27 @@ const Equipe = () => {
               aqui
             </a>.</p>
 
-          <h3 className="cargo-titulo"><MdOutlineHealthAndSafety /> Coordenação (1)</h3>
+          {equipeData.map((equipe) => (
+            <section key={equipe.id}>
+              <h3 className="cargo-titulo">
+                {equipe.icone} {equipe.titulo}
+              </h3>
 
-          <div className="equipe-cards">
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Rosemeri Oliveira Barañano</h3>
-                <p>Coordenadora e Fisioterapeuta Geral</p>
+              <div className="equipe-cards">
+                {equipe.profissionais.map((profissional) => (
+                  <div className="equipe-card" key={profissional.id}>
+                    <img src={profissional.foto} alt={`Foto de ${profissional.nome}`} />
+                    <div className="equipe-info">
+                      <h3>{profissional.nome}</h3>
+                      <p>{profissional.cargo}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            </div>
-          </div>
-
-          <h3 className="cargo-titulo"><GiHealing /> Equipe de Fisioterapia (9)</h3>
-
-          <div className="equipe-cards">
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Adriano François da Rosa Girasol</h3>
-                <p>Fisioterapeuta</p>
-              </div>
-            </div>
-
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Alessanda Moreira Ferreira</h3>
-                <p>Fisioterapeuta</p>
-              </div>
-            </div>
-
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Danuza Teixeira Corrêa</h3>
-                <p>Fisioterapeuta</p>
-              </div>
-            </div>
-
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Ionara Zavarese Hoffmeister</h3>
-                <p>Fisioterapeuta</p>
-              </div>
-            </div>
-
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Joana da Rocha Bittencourt</h3>
-                <p>Fisioterapeuta</p>
-              </div>
-            </div>
-
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Mara Cristina Crosta dos Reis</h3>
-                <p>Fisioterapeuta</p>
-              </div>
-            </div>
-
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Marcia Minuzzi Stochero</h3>
-                <p>Fisioterapeuta</p>
-              </div>
-            </div>
-
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Tais Silva Ramos Mouchet</h3>
-                <p>Fisioterapeuta</p>
-              </div>
-            </div>
-
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Tael Centeno Krolow</h3>
-                <p>Fisioterapeuta</p>
-              </div>
-            </div>
-          </div>
-
-          <h3 className="cargo-titulo"><GiHealing /> Equipe de Ortodopedia (2)</h3>
-
-          <div className="equipe-cards">
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Alexandre Codevilla Teixeira</h3>
-                <p>Médico Ortodopedista e Traumatologista</p>
-              </div>
-            </div>
-
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Carlito Mendonça de Menezes</h3>
-                <p>Técnico de Ortopedia</p>
-              </div>
-            </div>
-          </div>
-
-          <h3 className="cargo-titulo"><ClipboardPlusIcon /> Equipe de Enfermagem (1)</h3>
-
-          <div className="equipe-cards">
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Fernanda Reiznautt de Lima Gonçalves Monteiro</h3>
-                <p>Enfermeira</p>
-              </div>
-            </div>
-          </div>
-
-          <h3 className="cargo-titulo"><RiMentalHealthLine /> Equipe de Terapia (1)</h3>
-
-          <div className="equipe-cards">
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Andryelen Haas Gallina</h3>
-                <p>Terapeuta Ocupacional</p>
-              </div>
-            </div>
-          </div>
-
-          <h3 className="cargo-titulo"><ClipboardPlusIcon /> Equipe de Psicologia (1)</h3>
-
-          <div className="equipe-cards">
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Mônica Ester da Silva Mendes</h3>
-                <p>Psicólogo Clínico</p>
-              </div>
-            </div>
-          </div>
-
-          <h3 className="cargo-titulo"><ClipboardPlusIcon /> Equipe de Fonoaudiologia (1)</h3>
-
-          <div className="equipe-cards">
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Rosana Britto Maria</h3>
-                <p>Fonoaudiologo Geral</p>
-              </div>
-            </div>
-          </div>
-
-          <h3 className="cargo-titulo"> <Users2Icon /> Equipe de Apoio e Administrativa (8)</h3>
-
-          <div className="equipe-cards">
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Isabel Cristina Martins Domingues de Souza</h3>
-                <p>Assistente Social</p>
-              </div>
-            </div>
-
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Alice Bramardi Valiera</h3>
-                <p>Assistente Administrativo</p>
-              </div>
-            </div>
-
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Luciana Rivero Martinez</h3>
-                <p>Assistente Administrativo</p>
-              </div>
-            </div>
-
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Ana Carolina de Oliveira Proença</h3>
-                <p>Recepcionista, Em Geral</p>
-              </div>
-            </div>
-
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Bianca Rosa da Luz</h3>
-                <p>Recepcionista, Em Geral</p>
-              </div>
-            </div>
-
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Isadora Moraes Marques</h3>
-                <p>Recepcionista, Em Geral</p>
-              </div>
-            </div>
-
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Lisiane Berdet Jardim</h3>
-                <p>Recepcionista, Em Geral</p>
-              </div>
-            </div>
-
-            <div className="equipe-card">
-              <img src="./images/avatar.jpeg" alt="Foto do Profissional" />
-              <div className="equipe-info">
-                <h3>Marcia Ferrer Geleski</h3>
-                <p>Recepcionista, Em Geral</p>
-              </div>
-            </div>
-          </div>
+            </section>
+          ))}
         </div>
       </section>
     </>
-  );
-};
-
+  )};
 export default Equipe;
